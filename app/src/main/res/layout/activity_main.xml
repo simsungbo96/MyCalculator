@@ -277,8 +277,6 @@
                 android:id="@+id/button0"
                 android:text="0"
                 android:textColor="@color/textColor"
-                android:enabled="false"
-                android:clickable="false"
                 android:textSize="24sp"
                 android:layout_margin="7dp"
                 android:onClick="historyButtonClicked"
