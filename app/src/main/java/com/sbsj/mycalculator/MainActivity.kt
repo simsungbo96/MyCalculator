@@ -9,12 +9,19 @@ import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import java.lang.NumberFormatException
 
 class MainActivity : AppCompatActivity() {
 
     private val expressionTextView: TextView by lazy {
         findViewById(R.id.expressionTextView)
+    }
+    private val historyLayout:View by lazy {
+        findViewById(R.id.historyLayout)
+    }
+    private val historyLinearLayout:View by lazy {
+        findViewById(R.id.historyLinearLayout)
     }
 
     private var isOperator = false
@@ -151,6 +158,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun historyButtonClicked(v: View) {
+        historyLayout.isVisible = true
+        //TODO 디비에서 기록 불러오기
+        //TODO 뷰에 모든 기록 할당하기.
+    }
+
+    fun closeHistoryClicked(v: View){
+        historyLayout.isVisible = false
+    }
+    fun historyClearButtonClicked(v:View){
+        //TODO 디비에서 모든기록삭제
+        //TODO 뷰에서 모든기록삭제
     }
 }
 
